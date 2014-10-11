@@ -6,20 +6,49 @@ Objetivo generar una especificación que permitiera mejorar la comunicación ent
 
 # SmartJS-msg
 
-Nombre de fantasía para juntar un componente cliente ('smartjs-front') y el componente servidor ('smartjs-server') que acuerdan comunicarse a través de una especificación basada en Restfull y formato JSON. 
+Nombre de fantasía para juntar un componente cliente (`smartjs-front`) y el componente servidor (`smartjs-server`) que acuerdan comunicarse a través de una especificación basada en Restfull y formato JSON. 
+
+
+## smartjs-server
+
+Este componente empacado en un `WAR` expone una interfaz API web para el trabajo con representación de recursos en el servidor. Estos recursos pueden ser cualquier concepto de negocio, que puede poseer propiedades, de tipo básicas (`xml schemas`) o complejas (`relaciones`).
 
 Se entiende que la API Rest expondrá un recurso y operaciones posibles de realizar sobre éste, utilizando convensión sobre nomenclatura. El uso de palabras en singular hacen referencia a una instancia de dicho recurso. Su versión plural hace referencia a listas de instancias del mismo recurso. 
-
 
 La siguiente lista describe la convención de URLs, en donde se ilustra la distinción entre singular y particular. 
 La prueba de concepto realizada utiliza un único recurso: Persona, con dos propiedades: rut y amigos. Amigos es una lista de personas.
 
-## Singular
 
 ```
-GET /persona
+GET /api
+```
+Optiene lista de recursos administrador por esta API.
+
+```
+{
+	context: 'hackaton',
+	type: 'persona',
+	self: '/api',
+	actions: ['GET']
+	data: {
+		links:[
+			{
+				rel: 'persona', url: '/api/persona'
+			}
+		]
+	}
+}
+```
+
+
+```
+GET /api/persona
 ```
 Retorna la estructura del recurso, que permita a una interfaz externa tener información suficiente para solicitar agregar/crear una nueva instancia de este recurso.
+
+```
+
+```
 
 ```
 GET /persona/{id}
