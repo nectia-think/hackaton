@@ -1,0 +1,38 @@
+{
+	"context": "hackaton",
+	"type": "list",
+	"self": "/api/personas&limit=2&sort-desc=rut",
+	"actions": [
+		"GET"
+	],
+	"data": {
+		"list": [
+			{
+				"rut": "19",
+				"nombre": "Williams",
+				"links": [
+					{
+						"rel": "self",
+						"url": "/api/persona/1"
+					}
+				]
+			},
+			{
+				"rut": "27",
+				"nombre": "Francisco",
+				"links": [
+					{
+						"rel": "self",
+						"url": "/api/persona/2"
+					}
+				]
+			}
+		],
+		"links": [
+			{
+				"rel": "next",
+				"url": "/api/personas&sort-desc=rut&from=3&to=4"
+			}
+		]
+	}
+}

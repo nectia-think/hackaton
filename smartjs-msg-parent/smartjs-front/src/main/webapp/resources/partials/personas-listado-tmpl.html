@@ -7,7 +7,17 @@
     	</thead>
 	<tbody>
 		<tr ng-repeat="persona in personasList">
-			<td><label for=""><input type="radio"></label></td>
+			<td>
+				<label for="radio-{{ persona.rut }}">
+					<input 
+						   type="radio" 
+						   name="personas" 
+						   ng-model="personaLink"
+						   value="{{ persona.links[0].url }}" 
+						   id="radio-{{ persona.rut }}" />
+				</label>
+				<input type="text" ng-model="personaLink" />
+			</td>
 			<td>{{ persona.nombre }}</td>
 			<td>{{ persona.rut }}</td>
 		</tr>
@@ -15,8 +25,8 @@
 	<tfoot>
 		<tr>
 			<td colspan="3">
-				<button type="button" ui="button" class"blue">Editar</button>
-				<button type="button" ui="button" class"green">Ver</button>
+				<button type="button" ui="button" class="blue" ng-click="personaAction('edit')">Editar</button>
+				<button type="button" ui="button" class="green" ng-click="personaAction('view')">Ver</button>
 			</td>
 		</tr>
 	</tfoot>

@@ -1,5 +1,5 @@
 app
-	.factory('hackatonApiService', function($http) {
+	.factory('hackatonApiService', function($http, $q) {
 		
 		return {
 			
@@ -12,7 +12,7 @@ app
 					var deferred = $q.defer();
   
 					$http({
-						url		: '/api/personas/',
+						url		: 'resources/dummies/personas.json',
 						method	: 'GET',
 						params	: params
 					})
