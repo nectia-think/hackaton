@@ -1,11 +1,15 @@
 <table>
 	<caption><h3>Listado de personas</h3></caption>
-
+	<thead>
+	        <th width="20">Seleccionar</th>
+	        <th>Nombre</th>
+	        <th>Rut</th>
+    	</thead>
 	<tbody>
 		<tr ng-repeat="persona in personasList">
 			<td><label for=""><input type="radio"></label></td>
-			<td>Nombre {{ persona.nombre }}</td>
-			<td>RUT {{ persona.rut }}</td>
+			<td>{{ persona.nombre }}</td>
+			<td>{{ persona.rut }}</td>
 		</tr>
 	</tbody>
 	<tfoot>
