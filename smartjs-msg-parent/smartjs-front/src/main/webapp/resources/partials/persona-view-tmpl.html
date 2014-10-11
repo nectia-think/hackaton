@@ -1,1 +1,28 @@
-{{ message }}
+<table>
+	<thead>
+		<td>
+			<h2>Datos de usuario</h2>
+		</td>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ persona.nombre }}</td>
+			<td>{{ persona.rut }}</td>
+		</tr>
+	</tbody>
+</table>
+
+<button type="button">Ver amigos</button>
+<table>
+	<thead>
+		<td>
+			<h2>Amigos de usuario</h2>
+		</td>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ amigo.nombre }}</td>
+			<td>{{ amigo.rut }}</td>
+		</tr>
+	</tbody>
+</table>
