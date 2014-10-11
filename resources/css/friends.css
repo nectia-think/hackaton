@@ -6,7 +6,7 @@ h3
 {color: #888}
 
 [ui="button"]
-{padding: 8px 16px;font-weight: 700;font-size: 1.1rem;display: inline-block;color: #fff;background: #5C6067;margin: 8px 0;}
+{padding: 8px 16px;font-weight: 700;font-size: 1.1rem;display: inline-block;color: #fff;background: #5C6067;margin: 8px 0;border: 0!important;}
 
 /*border-radius*/
 [ui="button"], textarea, [ui="input-text"]
@@ -19,7 +19,11 @@ h3
 
 .blue
 {background:#45a0de}
+.blue:hover
+{background:#2980b9;}
 .green
+{background:#2ecc71}
+.green:hover
 {background:#27ae60}
 
 /**********************[tabla]************************/
