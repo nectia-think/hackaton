@@ -24,7 +24,7 @@ GET /api
 ```
 Optiene lista de recursos administrador por esta API.
 
-```
+```json
 {
 	context: 'hackaton',
 	type: 'persona',
