@@ -1,3 +1,23 @@
-<ul>
-	<li ng-repeat="persona in personasList"><a href="{{ persona.links[1].replace('/api','') }}"></a></li>
-</ul>
+<table>
+	<caption><h3>Listado de personas</h3></caption>
+	<thead>
+	        <th width="10">Seleccionar</th>
+	        <th>Nombre</th>
+	        <th>Rut</th>
+    	</thead>
+	<tbody>
+		<tr ng-repeat="persona in personasList">
+			<td><label for=""><input type="radio"></label></td>
+			<td>{{ persona.nombre }}</td>
+			<td>{{ persona.rut }}</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="3">
+				<button type="button" ui="button" class"blue">Editar</button>
+				<button type="button" ui="button" class"green">Ver</button>
+			</td>
+		</tr>
+	</tfoot>
+</table>
