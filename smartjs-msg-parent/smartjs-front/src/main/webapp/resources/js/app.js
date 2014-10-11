@@ -14,7 +14,7 @@ app
 				controller 	: 'personaEditController'
 			})
 			.when('/persona/:id/view', {
-				templateUrl : 'resources/partials/personas-view-tmpl.html',
+				templateUrl : 'resources/partials/persona-view-tmpl.html',
 				controller 	: 'personaViewController'
 			})
 			.otherwise({

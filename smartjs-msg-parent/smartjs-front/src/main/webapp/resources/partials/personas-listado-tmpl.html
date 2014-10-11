@@ -10,13 +10,12 @@
 			<td>
 				<label for="radio-{{ persona.rut }}">
 					<input 
-						   type="radio" 
-						   name="personas" 
-						   ng-model="personaLink"
-						   value="{{ persona.links[0].url }}" 
+						   type="radio"
+						   name="radio"
+						   ng-model="$parent.personaLink"
+						   value="{{ persona.links[0].url.replace('/api/','') }}" 
 						   id="radio-{{ persona.rut }}" />
 				</label>
-				<input type="text" ng-model="personaLink" />
 			</td>
 			<td>{{ persona.nombre }}</td>
 			<td>{{ persona.rut }}</td>

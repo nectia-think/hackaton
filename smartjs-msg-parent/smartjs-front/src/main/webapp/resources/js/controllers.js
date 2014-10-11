@@ -31,4 +31,15 @@ app
 			
 		}
 	
-	});
+	})
+	.controller('personaEditController', function ($scope, $routeParams, hackatonApiService) {
+	
+		$scope.message = 'edicion de usuario'+ $routeParams.id;
+		
+	
+	})
+	.controller('personaViewController', function ($scope, $routeParams, hackatonApiService) {
+	
+		$scope.message = 'visualizacion de usuario'+ $routeParams.id;
+	
+	})
