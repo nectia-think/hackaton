@@ -26,6 +26,9 @@ h3
 .green:hover
 {background:#27ae60}
 
+label
+{display: block;}
+
 /**********************[tabla]************************/
 
 table > tbody > tr:nth-child(odd)
