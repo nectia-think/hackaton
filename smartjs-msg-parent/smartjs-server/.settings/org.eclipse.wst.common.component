@@ -4,7 +4,10 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <property name="context-root" value="smartjs-server"/>
+        <dependent-module archiveName="utils-0.3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/utils/utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/smartjs-server/target/classes"/>
+        <property name="context-root" value="hack01"/>
     </wb-module>
 </project-modules>
