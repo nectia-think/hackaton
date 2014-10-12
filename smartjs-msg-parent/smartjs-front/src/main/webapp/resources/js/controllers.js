@@ -26,8 +26,11 @@ app
 			);
 		
 		$scope.personaAction = function(action) {
-			
-			$location.path($scope.personaLink+'/'+action);
+			if ( $scope.personaLink !== '' ) {
+				$location.path($scope.personaLink+'/'+action);
+			} else {
+				alert( 'por favor seleccione un nombre' );
+			}
 			
 		}
 	
