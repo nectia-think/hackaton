@@ -4,7 +4,7 @@
   <artifactId>smartjs-msg-parent</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
-  <name>Hackaton</name>
+  <name>Smartjs Mensajeria</name>
   <description>Pruebas de Concepto de Mecanismo Estándar para comunicación cliente servidor vía RESTfull. </description>
   <modules>
   	<module>smartjs-front</module>
